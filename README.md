@@ -1,6 +1,14 @@
 # Website-Development-Project
-body {
-    background-color: #add8e6;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Development Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- your content here -->
+
+</body>
+</html>
