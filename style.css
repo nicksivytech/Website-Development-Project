@@ -3,3 +3,42 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+.yellow-header {
+    background-color: #ffeb3b;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.orange-bar {
+    background-color: #ff9800;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.box {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.footer-box {
+    background-color: white;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
