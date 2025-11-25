@@ -1,79 +1,28 @@
-//--------------------------------------
-// Example 1: JUMP
-//--------------------------------------
-const jumpCanvas = document.getElementById("jumpCanvas");
-const jctx = jumpCanvas.getContext("2d");
-
-let y = 110;
-let velocity = 0;
-let gravity = 1;
-let jumping = false;
-
-function drawJumpCharacter() {
-    jctx.clearRect(0, 0, jumpCanvas.width, jumpCanvas.height);
-
-    // Stick figure
-    jctx.beginPath();
-    jctx.arc(100, y - 30, 15, 0, Math.PI * 2); 
-    jctx.moveTo(100, y - 15);
-    jctx.lineTo(100, y + 20);
-    jctx.stroke();
-
-    velocity += gravity;
-    y += velocity;
-
-    if (y > 110) {
-        y = 110;
-        velocity = 0;
-        jumping = false;
-    }
-
-    requestAnimationFrame(drawJumpCharacter);
-}
-
+// --- Example 1: Jump ---
+let jumpHeight = 0;
 document.addEventListener("keydown", (e) => {
-    if (e.code === "Space" && !jumping) {
-        velocity = -15;
-        jumping = true;
+    if (e.code === "Space") {
+        jumpHeight++;
+        console.log("Jump count:", jumpHeight);
     }
 });
-drawJumpCharacter();
 
-//--------------------------------------
-// Example 2: MOVE LEFT / RIGHT
-//--------------------------------------
-const moveCanvas = document.getElementById("moveCanvas");
-const mctx = moveCanvas.getContext("2d");
-
-let x = 100;
-
-function drawMoveCharacter() {
-    mctx.clearRect(0, 0, moveCanvas.width, moveCanvas.height);
-
-    mctx.beginPath();
-    mctx.arc(x, 70, 15, 0, Math.PI * 2);
-    mctx.moveTo(x, 85);
-    mctx.lineTo(x, 120);
-    mctx.stroke();
-
-    requestAnimationFrame(drawMoveCharacter);
-}
-
+// --- Example 2: Left & Right ---
+let position = 0;
 document.addEventListener("keydown", (e) => {
-    if (["ArrowLeft", "KeyA"].includes(e.code)) x -= 5;
-    if (["ArrowRight", "KeyD"].includes(e.code)) x += 5;
-
-    x = Math.max(20, Math.min(180, x)); // Keep inside canvas
+    if (["ArrowLeft", "KeyA"].includes(e.code)) {
+        position--;
+        console.log("Moved Left:", position);
+    }
+    if (["ArrowRight", "KeyD"].includes(e.code)) {
+        position++;
+        console.log("Moved Right:", position);
+    }
 });
-drawMoveCharacter();
 
-//--------------------------------------
-// Example 3: CLICK COUNTER
-//--------------------------------------
-const clickBox = document.getElementById("clickBox");
-let counter = 0;
-
-clickBox.addEventListener("click", () => {
-    counter++;
-    clickBox.textContent = counter;
+// --- Example 3: Click counter ---
+let clickCount = 0;
+document.addEventListener("click", () => {
+    clickCount++;
+    console.log("Click Count:", clickCount);
 });
