@@ -1,3 +1,25 @@
+/* Navigation Bar */
+.navbar {
+    background-color: #ff9d1a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar a:hover {
+    background-color: #ffe866;
+    color: black;
+    border-radius: 6px;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
