@@ -77,3 +77,42 @@ clickBox.addEventListener("click", () => {
     counter++;
     clickBox.textContent = counter;
 });
+
+//--------------------------------------
+// CONTACT FORM VALIDATION
+//--------------------------------------
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const formMessage = document.getElementById("formMessage");
+
+        if (name.length < 2) {
+            formMessage.textContent = "Name must be at least 2 characters.";
+            formMessage.style.color = "red";
+            return;
+        }
+
+        if (!email.includes("@") || !email.includes(".")) {
+            formMessage.textContent = "Please enter a valid email.";
+            formMessage.style.color = "red";
+            return;
+        }
+
+        if (message.length < 5) {
+            formMessage.textContent = "Message must be at least 5 characters.";
+            formMessage.style.color = "red";
+            return;
+        }
+
+        formMessage.textContent = "Form submitted successfully!";
+        formMessage.style.color = "green";
+
+        contactForm.reset();
+    });
+}
