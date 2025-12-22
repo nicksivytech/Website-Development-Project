@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact form for the Website Development Project.">
     <title>Contact - Website Development Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <header class="header">
-        <h1>Contact Me</h1>
-        <h2>Send a Message</h2>
-    </header>
+<header class="header">
+    <h1>Contact Me</h1>
+    <h2>Send a Message</h2>
+</header>
 
-    <section class="conclusion">
-        <h3>Contact Form</h3>
-        <form id="contactForm">
-            <label>Name:</label><br>
-            <input type="text" id="name" required minlength="2"><br><br>
+<section class="conclusion">
+    <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required minlength="2"><br><br>
 
-            <label>Email:</label><br>
-            <input type="email" id="email" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required><br><br>
 
-            <label>Message:</label><br>
-            <textarea id="message" required minlength="5"></textarea><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" required minlength="5"></textarea><br><br>
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+    </form>
 
-        <p id="formMessage" style="margin-top:20px; font-weight:bold;"></p>
-    </section>
+    <p id="formMessage" style="margin-top:20px; font-weight:bold;"></p>
+</section>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
